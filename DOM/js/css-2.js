@@ -1,6 +1,6 @@
 const userName = document.querySelector("#desc p");
 
-userName.onclick = () => {
+userName.onclick() = () => {
     userName.style.color = "blue";
     userName.style.fontSize = "30px";
     userName.style.backgroundColor = "yellow";
