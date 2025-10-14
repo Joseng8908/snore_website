@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+ window.onload = function() {
+ div = document.querySelector('div');
+ btn = document.querySelector('button');
+ 
+ btn.onclick = function() {
+ tid = setInterval(()=>{ div.innerHTML = new Date(); }, 1000);
+ setTimeout(()=>{clearInterval(tid)}, 10000);
+ }
+}
+</script>
+</head>
+<body>
+ <div></div>
+ <button>start</button>
+</body>
+</html>
