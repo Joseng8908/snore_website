@@ -1,19 +1,19 @@
 <html>
 <head>
-<script>
- window.onload = function() {
- div = document.querySelector('div');
- btn = document.querySelector('button');
- 
- btn.onclick = function() {
- tid = setInterval(()=>{ div.innerHTML = new Date(); }, 1000);
- setTimeout(()=>{clearInterval(tid)}, 10000);
+ <style>
+ #a:hover { transform: scale(2,2); }
+ button { transition: transform 3s; }
+ </style>
+ <script>
+ deg = 0;
+ function rotate(c) {
+ deg += 90;
+ c.style.transform = "rotate(" + deg + "deg)";
  }
-}
-</script>
+ </script>
 </head>
 <body>
- <div></div>
- <button>start</button>
+ <button id="a">마우스를 올려보세요.</button>
+ <button id="b" onclick="rotate(this)">마우스를 올려보세요.</button>
 </body>
 </html>
